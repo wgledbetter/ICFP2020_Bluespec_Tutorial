@@ -25,7 +25,7 @@
 TUTORIAL ?= ..
 
 # Set this to the command that invokes your Verilog simulator
-V_SIM ?= iverilog
+# V_SIM ?= iverilog
 # V_SIM ?= cvc
 # V_SIM ?= cver
 # V_SIM ?= vcsi
@@ -33,6 +33,7 @@ V_SIM ?= iverilog
 # V_SIM ?= modelsim
 # V_SIM ?= ncsim
 # V_SIM ?= ncverilog
+V_SIM ?= verilator
 
 # ================================================================
 # You should not have to change anything below this line
@@ -97,7 +98,7 @@ b_all: b_compile  b_link    b_sim
 b_compile:
 	mkdir  -p build_b_sim
 	@echo Compiling for Bluesim ...
-	bsc -u -sim $(B_SIM_DIRS) $(BSC_COMP_FLAGS) $(BSC_PATHS) -g $(TOPMODULE)  $(TOPFILE) 
+	bsc -u -sim $(B_SIM_DIRS) $(BSC_COMP_FLAGS) $(BSC_PATHS) -g $(TOPMODULE)  $(TOPFILE)
 	@echo Compiling for Bluesim finished
 
 .PHONY: b_link
