@@ -3,3 +3,6 @@
 *.ba
 *.o
 README.html
+*.so
+*_sim
+*.v
