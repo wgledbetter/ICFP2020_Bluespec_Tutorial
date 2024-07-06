@@ -22,7 +22,7 @@
 # Please modify the following for your installation and setup
 
 # Directory containing this tutorial
-TUTORIAL ?= ..
+TUTORIAL ?= ../../ref/icfb2020-tutorial/Examples
 
 # Set this to the command that invokes your Verilog simulator
 # V_SIM ?= iverilog
